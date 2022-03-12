@@ -33,22 +33,22 @@ var5 = digitalRead(botao5);
    //Serial.println(var1);
 
  if (var1){
-   Serial.println("Sou bonito");
+   Serial.println("bem 10");
  }
 
  if (var2){
-   Serial.println("Sou gostoso");
+   Serial.println("viva a estetica");
  }
 
  if (var3){
-   Serial.println("Jogo bola");
+   Serial.println("frede");
  }
 
  if (var4){
-   Serial.println("e Danco");
+   Serial.println("selvagem");
  }
 
  if (var5){
-   Serial.println("By megaboltgames");
+   Serial.println("simbolico");
  }
  }
