@@ -1,124 +1,93 @@
-const int led1 = 6;
-const int led2 = 7;
-const int led3 = 8;
-const int led4 = 9;
-const int led5 = 10;
-const int led6 = 11;
-const int led7 = 12;
-const int led8 = 13;
-const int led9 = 5;
-const int led10 = 4;
-
 const int pot = 0;
-int var = 0;
 
- void setup()
- { 
+int var1 = 0;
+int var2 = 12;
 
-      pinMode(led1, OUTPUT);
-      pinMode(led2, OUTPUT ); 
-      pinMode(led3, OUTPUT ); 
-      pinMode(led4, OUTPUT ); 
-      pinMode(led5, OUTPUT ); 
-      pinMode(led6, OUTPUT);
-      pinMode(led7, OUTPUT ); 
-      pinMode(led8, OUTPUT ); 
-      pinMode(led9, OUTPUT ); 
-      pinMode(led10, OUTPUT ); 
-       Serial.begin(9600);
- }
 
- void loop()
- {
-   var = analogRead(pot);
-   Serial.println(var);
-   delay(200);
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, INPUT);
+  Serial.begin(9600);
+}
 
-   if (var > 50){
-digitalWrite(led1, HIGH);
-   }
+void loop()
+{
+  var1 = analogRead(pot);
+  var2 = digitalRead(12);
+  Serial.println(var1);
   
-   else {
-digitalWrite(led1, LOW);
- 
-  }
-
-if (var > 100){
-digitalWrite(led2, HIGH);
-   }
+  if(var2){
   
-   else {
-digitalWrite(led2, LOW);
- 
+  if(var1 > 102){
+  digitalWrite(2,HIGH);
+  }else{
+  digitalWrite(2,LOW);
   }
-
-if (var > 200){
-digitalWrite(led3, HIGH);
-   }
   
-   else {
-digitalWrite(led3, LOW);
- 
+  if(var1 > 204){
+  digitalWrite(3,HIGH);
+  }else{
+  digitalWrite(3,LOW);
   }
-
-if (var > 300){
-digitalWrite(led4, HIGH);
-   }
   
-   else {
-digitalWrite(led4, LOW);
- 
+  if(var1 > 306){
+  digitalWrite(4,HIGH);
+  }else{
+  digitalWrite(4,LOW);
   }
-
-if (var > 400){
-digitalWrite(led5, HIGH);
-   }
   
-   else {
-digitalWrite(led5, LOW);
+  if(var1 > 408){
+  digitalWrite(5,HIGH);
+  }else{
+  digitalWrite(5,LOW);
   }
-
-if (var > 500){
-digitalWrite(led6, HIGH);
-   }
   
-   else {
-digitalWrite(led6, LOW);
- 
+  if(var1 > 510){
+  digitalWrite(6,HIGH);
+  }else{
+  digitalWrite(6, LOW);
   }
-
-if (var > 600){
-digitalWrite(led7, HIGH);
-   }
   
-   else {
-digitalWrite(led7, LOW);
- 
+  if(var1 > 612){
+  digitalWrite(7,HIGH);
+  }else{
+  digitalWrite(7, LOW);
   }
-
-if (var > 700){
-digitalWrite(led8, HIGH);
-   }
   
-   else {
-digitalWrite(led8, LOW);
- 
+  if(var1 > 714){
+  digitalWrite(8,HIGH);
+  }else{
+  digitalWrite(8, LOW);
   }
-
-if (var > 800){
-digitalWrite(led9, HIGH);
-   }
   
-   else {
-digitalWrite(led9, LOW);
- 
+  if(var1 > 816){
+  digitalWrite(9,HIGH);
+  }else{
+  digitalWrite(9, LOW);
   }
-
-if (var > 900){
-digitalWrite(led10, HIGH);
-   }
   
-   else {
-digitalWrite(led10, LOW);
+  if(var1 > 918){
+  digitalWrite(10,HIGH);
+  }else{
+  digitalWrite(10, LOW);
   }
- }
+  
+  if(var1 > 1020){
+  digitalWrite(11,HIGH);
+  }else{
+  digitalWrite(11, LOW);
+  }
+  }
+  
+  delay(200);
+}
