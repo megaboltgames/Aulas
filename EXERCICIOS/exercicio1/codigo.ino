@@ -1,18 +1,14 @@
-const int led1 = 6;
+// C++ code
+//
+void setup()
+{
+  pinMode(1, OUTPUT);
+}
 
- void setup()
- { 
-
-      pinMode(led1, OUTPUT);
-       //Serial.begin(9600);
- }
- 
-
- void loop()
- {
-  
-       digitalWrite(led1, HIGH);
-       delay(500);
-       digitalWrite(led1, LOW);
-       delay(500);
- }
+void loop()
+{
+  digitalWrite(1, HIGH);
+  delay(500);
+  digitalWrite(1, LOW);
+  delay(500);
+}
