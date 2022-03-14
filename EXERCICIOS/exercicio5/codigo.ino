@@ -1,25 +1,19 @@
-const int led1 = 6;
-const int botao1 = 5;
-
- void setup()
- { 
-
-      pinMode(led1, OUTPUT);
-     pinMode(botao1, INPUT);
-       //Serial.begin(9600);
- }
- 
-int valor1;
-
- void loop()
- {
-valor1 = digitalRead(botao1);
-
+int var1;
   
+void setup()
+{
+  pinMode(1,INPUT);
+  pinMode(2,OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  var1 = digitalRead(1);
+  if(var1){
+  digitalWrite(2,LOW);
+  }else{
+  digitalWrite(2,HIGH);
+  }
   
-   if(valor1) {
-       digitalWrite(led1, LOW);
-   }else{
-     digitalWrite(led1, HIGH);
-   }
- }
+}
